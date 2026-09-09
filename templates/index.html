@@ -16,7 +16,7 @@
 
             <div class="navigation">
                 <button>← Día anterior</button>
-                <span>September 8, 2026</span>
+                <span>{{ today.strftime("%B %d, %Y") }}</span>
                 <button>Día siguiente →</button>
             </div>
         </header>
@@ -27,7 +27,7 @@
             <section class="page yesterday">
 
                 <h2>AYER</h2>
-                <h3>Monday, September 7</h3>
+              <h3>{{ yesterday.strftime("%A, %B %d, %Y") }}</h3>
 
                 <div class="section">
                     <h4>Lo que hice</h4>
@@ -56,8 +56,7 @@
             <section class="page today">
 
                 <h2>HOY</h2>
-                <h3>Tuesday, September 8</h3>
-
+                <h3>{{ today.strftime("%A, %B %d, %Y") }}</h3>
                 <div class="section">
                     <h4>Prioridades</h4>
 
