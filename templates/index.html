@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Digital Desk Planner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="desk">
+
+        <header class="planner-header">
+            <h1>My Digital Desk Planner</h1>
+
+            <div class="navigation">
+                <button>← Día anterior</button>
+                <span>September 8, 2026</span>
+                <button>Día siguiente →</button>
+            </div>
+        </header>
+
+        <main class="planner">
+
+            <!-- LEFT PAGE: YESTERDAY -->
+            <section class="page yesterday">
+
+                <h2>AYER</h2>
+                <h3>Monday, September 7</h3>
+
+                <div class="section">
+                    <h4>Lo que hice</h4>
+
+                    <label><input type="checkbox" checked> Trabajo</label>
+                    <label><input type="checkbox" checked> Revisar proyecto</label>
+                    <label><input type="checkbox"> Llamar al mecánico</label>
+                </div>
+
+                <div class="section">
+                    <h4>Pendiente</h4>
+
+                    <p>→ Terminar tarea</p>
+                    <p>→ Comprar refacción</p>
+                </div>
+
+                <div class="section notes">
+                    <h4>Notas</h4>
+
+                    <textarea placeholder="Notas del día anterior..."></textarea>
+                </div>
+
+            </section>
+
+            <!-- RIGHT PAGE: TODAY -->
+            <section class="page today">
+
+                <h2>HOY</h2>
+                <h3>Tuesday, September 8</h3>
+
+                <div class="section">
+                    <h4>Prioridades</h4>
+
+                    <input type="text" placeholder="1. Prioridad principal">
+                    <input type="text" placeholder="2. Segunda prioridad">
+                    <input type="text" placeholder="3. Tercera prioridad">
+                </div>
+
+                <div class="section">
+                    <h4>Tareas de hoy</h4>
+
+                    <label><input type="checkbox"> Trabajo</label>
+                    <label><input type="checkbox"> Estudiar</label>
+                    <label><input type="checkbox"> Proyecto de agenda</label>
+                    <label><input type="checkbox"> Agregar tarea...</label>
+                </div>
+
+                <div class="section notes">
+                    <h4>Notas</h4>
+
+                    <textarea placeholder="Escribe aquí tus notas..."></textarea>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
