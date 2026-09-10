@@ -59,10 +59,34 @@
                 <h3>{{ today.strftime("%A, %B %d, %Y") }}</h3>
                 <div class="section">
                     <h4>Prioridades</h4>
+                    <form method="POST">
 
-                    <input type="text" placeholder="1. Prioridad principal">
-                    <input type="text" placeholder="2. Segunda prioridad">
-                    <input type="text" placeholder="3. Tercera prioridad">
+    <div class="section">
+        <h4>Prioridades</h4>
+
+        <input
+            type="text"
+            name="priority1"
+            placeholder="1. Prioridad principal"
+            value="{{ planner['priority1'] if planner else '' }}"
+        >
+
+        <input
+            type="text"
+            name="priority2"
+            placeholder="2. Segunda prioridad"
+            value="{{ planner['priority2'] if planner else '' }}"
+        >
+
+        <input
+            type="text"
+            name="priority3"
+            placeholder="3. Tercera prioridad"
+            value="{{ planner['priority3'] if planner else '' }}"
+        >
+
+    </div>
+                   
                 </div>
 
                 <div class="section">
@@ -77,7 +101,20 @@
                 <div class="section notes">
                     <h4>Notas</h4>
 
-                    <textarea placeholder="Escribe aquí tus notas..."></textarea>
+                        <div class="section notes">
+
+        <h4>Notas</h4>
+
+        <textarea
+            name="notes"
+            placeholder="Escribe aquí tus notas..."
+        >{{ planner['notes'] if planner else '' }}</textarea>
+
+    </div>
+
+    <button type="submit">Guardar día</button>
+
+</form>
                 </div>
 
             </section>
